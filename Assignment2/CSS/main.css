@@ -1,0 +1,65 @@
+body {
+	background: yellow;
+	overflow: auto;
+	}
+	
+main {
+	background: white;
+	overflow: auto;
+	}
+	
+header {
+	background: white;
+	overflow: auto;
+	}
+	
+header h1 {
+	float: left;
+	width: 570px;
+	color: red;
+	font-style: italic;
+	margin: 15px 0px 1px 50px;
+	}
+
+header nav {
+	float: right;
+	width: 285px;
+	}
+	
+main .left {
+	float: left;
+	width: 570px;
+	height: 400px;
+	margin: 50px 1px 5px 50px;
+	}
+	
+main .right {
+	float: right;
+	width: 285px;
+	height: 400px;
+	}
+	
+footer .contact {
+	float: left;
+	width: 570px;
+	margin: 5px 1px 5px 50px;
+	}
+	
+footer .sitemap {
+	float: right;
+	width: 200px;
+	margin: 5px 50px 5px 1px;	
+	}
+	
+.llist {
+	float: left;
+	}
+	
+.rlist {
+	float: right;
+	}
+	
+.red {
+	color: red;
+	}
+

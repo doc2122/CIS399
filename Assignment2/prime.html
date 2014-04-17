@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+	<style>
+        h2 { color: red; }
+
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script>
+		function isPrime(num) {
+            if (num.length == 0) return "";
+            if (num < 1) return " you entered a value less than 1!"
+   		    if (num < 2) return num + " is prime!";
+            var max = Math.floor(Math.sqrt(num));
+            for (var i = 2; i <= max; i++) {
+                if(num%i==0)
+                    return i + " divides " + num;
+            }
+   	        return num + " is prime!";
+		}
+
+        var main = function (){
+              $("button.submit").on("click", function (event){
+                  var selector = $(".selector").val();
+                  $(".answer").text(isPrime(selector));
+                  $(".selector").val("");
+
+              });
+
+              $(".selector").on("keypress", function (event){
+                  if(event.keyCode === 13) {
+                      var selector = $(".selector").val();
+                      $(".answer").text(isPrime(selector));
+                      $(".selector").val("");
+                  }
+              });
+        }
+
+
+		$(document).ready(main);
+	</script>
+
+	</head>
+
+	<body>
+
+		<h1>Let me check that for you</h1>
+
+		<section class="result">
+			<h2>Type in a number and I'll check if its prime: <input class ="selector" type="text"> <button class="submit">Submit</button></h2>
+            <h3> What I found: Looks like <span class="answer"> </span> </h3>
+
+		</section>
+
+		</body>
+	</html>

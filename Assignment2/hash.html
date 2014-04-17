@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+	<style>
+        h2 { color: red; }
+
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script>
+        var petName = {};
+
+		function whatName(name) {
+            if(name.length == 0)
+                return "";
+
+            if (name in petName){
+                petName[name] += 1;
+                return name + " now has " + petName[name] + " votes";
+            }
+            else {
+                petName[name] = 1;
+                return name + " now has " + petName[name] + " vote";
+            }
+		}
+
+        var main = function (){
+            $("button.submit").on("click", function (event){
+                console.log("clicked");
+                var selector = $(".selector").val().toLowerCase();
+                $(".answer").text(whatName(selector));
+                $(".selector").val("");
+
+            });
+
+            $(".selector").on("keypress", function (event){
+                  if(event.keyCode === 13) {
+                      var selector = $(".selector").val().toLowerCase();
+                      $(".answer").text(whatName(selector));
+                      $(".selector").val("");
+                  }
+              });
+        }
+
+
+		$(document).ready(main);
+	</script>
+
+	</head>
+
+	<body>
+
+		<h1>Fabulous Pet Name Recorder</h1>
+
+		<section class="result">
+			<h2>Write a name for my dog: <input class ="selector" type="text"> <button class="submit">Submit</button></h2>
+            <h3> What I found: The name <span class="answer"> </span> </h3>
+
+		</section>
+
+		</body>
+	</html>

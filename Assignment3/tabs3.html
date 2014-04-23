@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+    <head>
+
+        <title>3 Tabs</title>
+
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <style>
+
+            .hidden {
+                display: none;
+            }
+
+            .tabs span.active {
+                background: red;
+            }
+
+        </style>
+
+        <script>
+
+
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Tab Demo</h1>
+
+        </header>
+
+        <main>
+
+            <div class="tabs">
+
+                <button id="tab1"><span class="active">Dog Names</span></button>
+                <button id="tab2"><span>Prime Checker</span></button>
+                <button id="tab3"><span>Canvas Demo</span></button>
+
+            </div>
+
+            <div class="tab1 triad">
+
+
+		        <h1>Fabulous Pet Name Recorder</h1>
+
+                <section class="result">
+                    <h2>Write a name for my dog: <input class ="selector1" type="text"> <button class="submit1">Submit</button></h2>
+                    <h3> What I found: The name <span class="answer1"> </span> </h3>
+
+                </section>
+
+
+            </div>
+
+            <div class="tab2 hidden triad">
+                <h1>Let me check that for you</h1>
+
+                <section class="result">
+                    <h2>Type in a number and I'll check if its prime: <input class ="selector2" type="text"> <button class="submit2">Submit</button></h2>
+                    <h3> What I found: Looks like <span class="answer2"> </span> </h3>
+
+                </section>
+
+            </div>
+
+            <div class="tab3 hidden triad">
+
+            </div>
+
+        </main>
+        <script src="js/game.js"></script>
+        <script src="js/tab.js"></script>
+
+    </body>
+
+</html>
